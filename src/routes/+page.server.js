@@ -1,4 +1,3 @@
-// import { IFPA_CONFIG } from '../config';
 import { IFPA_KEY } from '$env/static/private'
 
 // TODO: ~eventually~, make this a form action instead of a load event so people can look up their own stuff?
