@@ -12,9 +12,9 @@ export async function load({fetch}) {
 
 	try {
 		const response = await fetch(url, headers)
-		const playerData = await response.json();
+		const data = await response.json();
 
-		return playerData
+		return data
 	} catch (error) {
 		// TODO: Add better error handling
 		console.log("Error is", error);
