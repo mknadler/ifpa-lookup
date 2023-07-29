@@ -1,6 +1,6 @@
 # Pinball Lookup
 
-Simple SvelteKit site that uses the [IFPA](https://www.ifpapinball.com/) API to get my competitive pinball stats and then renders them.
+Simple SvelteKit site that uses the [IFPA](https://www.ifpapinball.com/)'s [API v2](https://api.ifpapinball.com/d/#/) to get my competitive pinball stats and then renders them. v2 of the IFPA API is in beta and under active development so this little site may break at some point. I would use the more stable v1 but it lacks easy access to some of the data I need (e.g. women's rankings) and generally has more and more interesting endpoints.
 
 ## Developing
 
