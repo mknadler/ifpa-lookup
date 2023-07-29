@@ -1,4 +1,5 @@
 <script>
+	export let data;
 </script>
 
 <svelte:head>
@@ -7,9 +8,10 @@
 </svelte:head>
 
 <section>
-
+	{#if data}
+		{ JSON.stringify(data) }
+	{/if}
 </section>
 
 <style>
-
 </style>
