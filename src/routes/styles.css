@@ -3,3 +3,49 @@
 * {
 	box-sizing: border-box;
 }
+
+:root {
+	--color-darkgray: #222;
+	--color-medpink: #C2366E;
+	--color-darkpurp: #0B0019;
+	--color-lightgray: #EDEDED;
+
+	--font-headings: 'Texturina', Georgia, Times, serif; 
+	--font-body: 'Space Mono', monospace;
+
+	--mq-smallest: 30rem;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	background-color: var(--color-darkpurp);
+	color: var(--color-lightgray);
+	font-family: var(--font-body), monospace;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5 {
+	font-family: var(--font-headings), serif;
+	font-size: 2rem;
+}
+
+hr {
+	margin: 2rem 0;
+}
+
+.app {
+	padding: 2rem 4rem;
+	@media (max-width: 30rem) {
+		padding: 2rem;
+	}
+}
+
+.info {
+	max-width: 100%;
+}
+
+.info__debug {
+	line-break: anywhere;
+}
