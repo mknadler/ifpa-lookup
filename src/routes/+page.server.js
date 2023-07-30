@@ -10,13 +10,21 @@ export async function load({fetch}) {
 	}
 	const url = `https://api.ifpapinball.com/v2/player?players=36799&api_key=${IFPA_KEY}`
 
-	try {
-		const response = await fetch(url, headers)
-		const data = await response.json();
+	let response;
 
-		return data
+	try {
+	 	response = await fetch(url, headers)
 	} catch (error) {
-		// TODO: Add better error handling
-		console.log("Error is", error);
+		return { error: 'Failed to get any data from IFPA API, try again later' }
+	}
+
+	if (response?.ok) {
+		const data = await response.json();
+		if (data?.player && data.player.length === 0) {
+			return { error: 'Player not found, check ID'}
+		}
+		return data
+	} else {
+		return { error: response?.status }
 	}
 }
